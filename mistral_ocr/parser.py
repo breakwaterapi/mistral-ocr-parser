@@ -11,7 +11,8 @@ from typing import Optional, Union, Any
 from dotenv import load_dotenv
 from tqdm import tqdm
 
-from mistralai import Mistral, DocumentURLChunk
+from mistralai.client import Mistral
+from mistralai.client.models import DocumentURLChunk
 
 from .image import generate_image_description
 

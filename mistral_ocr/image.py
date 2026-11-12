@@ -91,7 +91,7 @@ def generate_image_description(image_base64: str, client) -> Dict[str, Any]:
         prompt_text = "Describe this image in detail. Include what type of image it is (chart, graph, photograph, diagram, etc.), what it depicts, and any key elements. Also provide structured metadata about the image content."
 
         # Generate a description using Mistral
-        from mistralai import TextChunk, ImageURLChunk
+        from mistralai.client.models import TextChunk, ImageURLChunk
 
         # Handle both real API client and mock client in tests
         try:
@@ -186,7 +186,7 @@ def process_image_ocr(
     Returns:
         The OCR response.
     """
-    from mistralai import ImageURLChunk
+    from mistralai.client.models import ImageURLChunk
 
     # Ensure image_path is a Path object
     image_path = Path(image_path)
@@ -223,7 +223,7 @@ def structured_ocr(
     Returns:
         Structured OCR response as a StructuredOCR object or dictionary.
     """
-    from mistralai import ImageURLChunk, TextChunk
+    from mistralai.client.models import ImageURLChunk, TextChunk
 
     # Ensure image_path is a Path object
     image_path = Path(image_path)

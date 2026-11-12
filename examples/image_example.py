@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 from dotenv import load_dotenv
 
-from mistralai import Mistral
+from mistralai.client import Mistral
 
 # Import the structured OCR functionality from the package
 from mistral_ocr import structured_ocr, process_image_ocr
